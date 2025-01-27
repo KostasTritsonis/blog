@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import logo from '../../public/logo.webp';
 
 const navLinks = [
     {
@@ -24,7 +25,7 @@ export default function Header() {
   return (
     <header className='flex items-center justify-between py-4 px-7 border-b'>
         <Link href='/'>
-            <Image src="https://bytegrad.com/course-assets/youtube/example-logo.png"
+            <Image src={logo}
             alt="Logo"
             className="w-[35px] h-[35px]"
             width="35"
