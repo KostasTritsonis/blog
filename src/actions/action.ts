@@ -22,6 +22,8 @@ export async function createPost(formFata: FormData) {
             
         },      
     });
+    
+    revalidatePath('/posts');
 }
 
 
