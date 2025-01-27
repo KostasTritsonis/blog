@@ -7,12 +7,19 @@ export default async function PostsList() {
   const posts = await prisma.post.findMany();
 
   return (
-    <ul>
-    {posts.map((post) => (
-      <li key={post.id} className='mb-3'>
-        <Link href={`/posts/${post.id}`}>{post.title}</Link>
-      </li>
-    ))}
-  </ul>
+    <>
+     {posts.length === 0 ? (
+        // Display a message if there are no posts
+        <p className="text-gray-500">There are no posts.</p>
+      ) : (
+        <ul>
+          {posts.map((post) => (
+            <li key={post.id} className='mb-3'>
+              <Link href={`/posts/${post.id}`}>{post.title}</Link>
+            </li>
+          ))}
+        </ul>
+      )}
+  </>
   )
 }
