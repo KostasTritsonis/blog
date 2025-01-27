@@ -1,5 +1,4 @@
 import PostsList from '@/components/posts-list';
-import { Suspense } from 'react';
 
 export default function Page() {
 

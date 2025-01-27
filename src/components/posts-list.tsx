@@ -1,6 +1,5 @@
 import { prisma } from '@/lib/db';
 import Link from 'next/link'
-import { Suspense } from 'react';
 
 export default async function PostsList() {
 
