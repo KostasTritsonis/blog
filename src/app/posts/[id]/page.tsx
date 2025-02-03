@@ -1,5 +1,5 @@
-import DeletePostForm from "@/components/DeletePostForm";
-import EditPostForm from "@/components/EditPostForm";
+import DeletePostForm from "@/components/delete-post-form";
+import EditPostForm from "@/components/edit-post-fom";
 import { prisma } from "@/lib/db"
 import { notFound } from "next/navigation";
 import { SignedIn, SignedOut } from '@clerk/nextjs';
